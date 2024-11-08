@@ -1,4 +1,3 @@
-// src/app.controller.ts
 import { Controller, Get, Post, Patch, Body, Param } from '@nestjs/common';
 import { AppService } from './app.service';
 import { CreateCardDto } from './card.dto';
@@ -10,7 +9,6 @@ export class AppController {
 
   @Post()
   createCard(@Body() createCardDto: CreateCardDto): Card {
-    console.log('ingrese')
     const response = this.appService.createCard(createCardDto);
     return response;
   }
